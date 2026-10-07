@@ -1,0 +1,2 @@
+import { AlertCircle, CheckCircle2, X } from 'lucide-react';
+export default function Toast({ type='error', message, onClose }) { if(!message)return null; const ok=type==='success'; return <div className={`position-fixed top-0 end-0 m-3 alert ${ok?'alert-success':'alert-danger'} shadow-lg d-flex align-items-center gap-2`} style={{zIndex:2000,maxWidth:420}}>{ok?<CheckCircle2 size={18}/>:<AlertCircle size={18}/>}<span className="flex-grow-1">{message}</span><button className="btn btn-sm" onClick={onClose}><X size={16}/></button></div> }

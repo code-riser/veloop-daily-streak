@@ -1,0 +1,2 @@
+import styles from './DailyStreak.module.css';
+export default function StreakSkeleton(){return <div className={styles.skeletonPage}><div className={`${styles.sk} ${styles.skHero}`}/><div className={styles.skStats}>{[1,2,3].map(x=><div className={styles.sk} key={x}/>)}</div><div className={styles.sk} style={{height:220}}/><div className={styles.skGrid}>{Array.from({length:7},(_,i)=><div className={styles.sk} key={i}/>)}</div></div>}

@@ -1,0 +1,5 @@
+import { ArrowLeft, Coins, LogOut, Flame, Menu } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
+import styles from './DailyStreak.module.css';
+export default function StreakHeader({status}){const nav=useNavigate();const{user,logout}=useAuth();return <header className={styles.header}><button className={styles.iconBtn} onClick={()=>nav(-1)} aria-label="Back"><ArrowLeft size={19}/></button><div className={styles.headerTitle}><strong>VELoop</strong><span>Daily Streak</span></div><div className={styles.headerRight}><div className={styles.streakPill}><Flame size={16}/><b>{status?.currentStreak||0}</b><span>day streak</span></div><div className={styles.balance}><Coins size={16}/><span>{Number(status?.totalVES||0).toLocaleString()}</span><small>VEs</small></div><div className={styles.userMenu}><span>{user?.name?.charAt(0)?.toUpperCase()||'U'}</span><button className={styles.iconBtn} title="Logout" onClick={logout}><LogOut size={16}/></button></div></div><button className={styles.mobileMenu}><Menu size={20}/></button></header>}

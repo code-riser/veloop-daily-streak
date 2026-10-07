@@ -1,0 +1,258 @@
+.page {
+    min-height: 100vh;
+    background: #080611;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .glow {
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      #7c3aed2b,
+      transparent 68%
+    );
+    top: -180px;
+    right: -120px;
+  }
+  
+  .card {
+    width: min(100%, 480px);
+    background: #100d1bde;
+    border: 1px solid #ffffff13;
+    border-radius: 28px;
+    padding: 34px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 30px 90px #0008;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  
+  .brandIcon {
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    background: linear-gradient(
+      135deg,
+      #8b5cf6,
+      #e7b85e
+    );
+    display: grid;
+    place-items: center;
+    color: #fff;
+  }
+  
+  .hero {
+    margin: 46px 0 28px;
+  }
+  
+  .hero span {
+    color: #c8a35a;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 800;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin: 9px 0 10px;
+    line-height: 1.15;
+  }
+  
+  .hero p {
+    color: #a49cae;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #c9c2d0;
+    margin: 17px 0 8px;
+  }
+  
+  .input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ffffff14;
+    background: #0b0912;
+    border-radius: 14px;
+    padding: 0 14px;
+    color: #847c91;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  
+  .input:focus-within {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 3px #8b5cf61a;
+  }
+  
+  .input input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    width: 100%;
+    padding: 13px 0;
+    font-size: 14px;
+  }
+  
+  .input input::placeholder {
+    color: #625b6b;
+  }
+  
+  .input button {
+    background: none;
+    border: 0;
+    color: #8f8799;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .input button:hover {
+    color: #fff;
+  }
+  
+  .primary {
+    margin-top: 24px;
+    width: 100%;
+    border: 0;
+    border-radius: 14px;
+    padding: 14px 18px;
+    background: linear-gradient(
+      100deg,
+      #7c3aed,
+      #9f67ff
+    );
+    color: #fff;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 10px 28px #7c3aed33;
+    cursor: pointer;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      opacity 0.2s ease;
+  }
+  
+  .primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 32px #7c3aed4d;
+  }
+  
+  .primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .error {
+    margin-top: 15px;
+    padding: 11px 13px;
+    border-radius: 12px;
+    background: #ef44441a;
+    color: #ff9b9b;
+    font-size: 13px;
+    border: 1px solid #ef44441c;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 22px 0;
+    color: #8f8799;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ffffff12;
+  }
+  
+  .googleButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 44px;
+  }
+  
+  .bottom {
+    text-align: center;
+    color: #8f8799;
+    margin: 22px 0 0;
+    font-size: 13px;
+  }
+  
+  .bottom a {
+    color: #d4b36a;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .bottom a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 520px) {
+    .page {
+      padding: 16px;
+    }
+  
+    .card {
+      padding: 26px 20px;
+      border-radius: 22px;
+    }
+  
+    .hero {
+      margin: 36px 0 24px;
+    }
+  
+    .hero h1 {
+      font-size: 30px;
+    }
+  }
+.demoButton{
+  width:100%;
+  margin-top:12px;
+  min-height:44px;
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+  color:#f5f5f5;
+  font-weight:600;
+  cursor:pointer;
+}
+.demoButton:hover{background:rgba(255,255,255,.09)}
+.demoButton:disabled{opacity:.55;cursor:not-allowed}
